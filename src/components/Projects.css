@@ -1,0 +1,104 @@
+.nda-banner {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+  margin-bottom: 48px;
+}
+.nda-banner__icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+.nda-banner__title { font-family: var(--font-display); font-weight: 600; font-size: 0.9rem; color: var(--text-primary); margin-bottom: 4px; }
+.nda-banner__text { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.7; }
+
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  border-color: var(--border-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.3);
+}
+
+.project-card__nda-badge {
+  position: absolute;
+  top: 16px; right: 16px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: #A78BFA;
+}
+
+.project-card__status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+.project-card__status--in-progress { color: var(--accent-cyan); }
+.project-card__status--shipped { color: #4ADE80; }
+.project-card__status--archived { color: var(--text-muted); }
+
+.project-card__title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  padding-right: 40px;
+}
+
+.project-card__desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.project-card__tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.project-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--accent-cyan);
+  margin-top: 4px;
+  transition: gap 0.2s;
+}
+.project-card__link:hover { gap: 10px; }
